@@ -12,21 +12,35 @@
 
 NAME = libfts.a
 
-CC = nasm
+NAME_MAIN = main
+
+ASM = nasm
+
+CC = gcc
+
+MAIN = main.c
+
+FLAGS = -Wall -Wextra -Werror
 
 SRC = ft_memset.s ft_bzero.s
 
-OBJ = ft_memset.o ft_bzero.o
+OBJ = $(SRC:.s=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-	@echo "Create object files"
-	@$(CC) -f macho64 $(OBJ) $(SRC)
+$(NAME): $(SRC) $(OBJ)
 	@echo "Create library"
 	@ar rc $(NAME) $(OBJ)
 	@echo "Index library"
 	@ranlib $(NAME)
+
+%.o: %.s
+	@echo "Create object file"
+	@$(ASM) -f elf64 -o $@ $<
+
+main: $(MAIN)
+	@echo "Compile main"
+	@$(CC) -o $(NAME_MAIN) $(MAIN) -L. -lfts $(FLAGS)
 
 clean:
 	@echo "Clean object files"
@@ -35,5 +49,9 @@ clean:
 fclean: clean
 	@echo "Clean library"
 	@/bin/rm -f $(NAME)
+
+clean-main:
+	@echo "Clean main"
+	@/bin/rm -f $(NAME_MAIN)
 
 re: fclean all

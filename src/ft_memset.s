@@ -11,9 +11,9 @@
 # **************************************************************************** #
 
 segment		.text
-global		start
+global		ft_memset
 
-start:
+ft_memset:
 	xor		rcx, rcx
 while:
 	cmp		rcx, rdx

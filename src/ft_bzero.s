@@ -11,10 +11,10 @@
 # **************************************************************************** #
 
 segment		.text
-global		start
+global		ft_bzero
 extern		ft_memset
 
-start:
+ft_bzero:
 	mov		rdx, rsi			; place size = 2nd arg of ft_bzero as 3rd arg of ft_memset
 	xor		rsi, rsi			; 2nd arg of ft_memset = 0
 	call	ft_memset

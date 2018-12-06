@@ -108,6 +108,14 @@ int		main(void) {
 	printf("test val = %s, libc ret = %s, nasm ret = %s\n", "200", (isascii(200)) ? "True" : "False", (ft_isascii(200)) ? "True" : "False");
 	printf("test val = %s, libc ret = %s, nasm ret = %s\n\n", "300", (isascii(300)) ? "True" : "False", (ft_isascii(300)) ? "True" : "False");
 	
+	/* ft_isprint */
+
+	printf("ft_isprint:\n");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'c', (isprint('c')) ? "True" : "False", (ft_isprint('c')) ? "True" : "False");
+	printf("test char = %s, libc ret = %s, nasm ret = %s\n", "\\n", (isprint('\n')) ? "True" : "False", (ft_isprint('\n')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '7', (isprint('1')) ? "True" : "False", (ft_isprint('1')) ? "True" : "False");
+	printf("test char = %s, libc ret = %s, nasm ret = %s\n", "\\0", (isprint('\0')) ? "True" : "False", (ft_isprint('\0')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n\n", '}', (isprint('}')) ? "True" : "False", (ft_isprint('}')) ? "True" : "False");
 	/* cleanup */
 
 	free(memset_str);

@@ -86,7 +86,7 @@ int		main(void) {
 	printf("ft_isdigit:\n");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'c', (isdigit('c')) ? "True" : "False", (ft_isdigit('c')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'X', (isdigit('X')) ? "True" : "False", (ft_isdigit('X')) ? "True" : "False");
-	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '7', (isdigit('1')) ? "True" : "False", (ft_isdigit('1')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '1', (isdigit('1')) ? "True" : "False", (ft_isdigit('1')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '[', (isdigit('[')) ? "True" : "False", (ft_isdigit('[')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n\n", '}', (isdigit('}')) ? "True" : "False", (ft_isdigit('}')) ? "True" : "False");
 
@@ -98,6 +98,15 @@ int		main(void) {
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '7', (isalnum('1')) ? "True" : "False", (ft_isalnum('1')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '[', (isalnum('[')) ? "True" : "False", (ft_isalnum('[')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n\n", '}', (isalnum('}')) ? "True" : "False", (ft_isalnum('}')) ? "True" : "False");
+	
+	/* ft_isascii */
+
+	printf("ft_isascii:\n");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'c', (isascii('c')) ? "True" : "False", (ft_isascii('c')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'X', (isascii('X')) ? "True" : "False", (ft_isascii('X')) ? "True" : "False");
+	printf("test val = %s, libc ret = %s, nasm ret = %s\n", "-1", (isascii(-1)) ? "True" : "False", (ft_isascii(-1)) ? "True" : "False");
+	printf("test val = %s, libc ret = %s, nasm ret = %s\n", "200", (isascii(200)) ? "True" : "False", (ft_isascii(200)) ? "True" : "False");
+	printf("test val = %s, libc ret = %s, nasm ret = %s\n\n", "300", (isascii(300)) ? "True" : "False", (ft_isascii(300)) ? "True" : "False");
 	
 	/* cleanup */
 

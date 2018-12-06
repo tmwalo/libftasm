@@ -90,6 +90,15 @@ int		main(void) {
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '[', (isdigit('[')) ? "True" : "False", (ft_isdigit('[')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n\n", '}', (isdigit('}')) ? "True" : "False", (ft_isdigit('}')) ? "True" : "False");
 
+	/* ft_isalnum */
+
+	printf("ft_isalnum:\n");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'c', (isalnum('c')) ? "True" : "False", (ft_isalnum('c')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'X', (isalnum('X')) ? "True" : "False", (ft_isalnum('X')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '7', (isalnum('1')) ? "True" : "False", (ft_isalnum('1')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '[', (isalnum('[')) ? "True" : "False", (ft_isalnum('[')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n\n", '}', (isalnum('}')) ? "True" : "False", (ft_isalnum('}')) ? "True" : "False");
+	
 	/* cleanup */
 
 	free(memset_str);

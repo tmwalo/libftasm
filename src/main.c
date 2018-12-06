@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/06 12:29:53 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/06 16:40:54 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,23 @@ int		main(void) {
 	printf("set 4 bytes to zero, nasm: ");
    	print_mem_bytes(bzero_str, (int) strlen(str));
 	printf("\n\n");
+
+	/* ft_strcat */
+
+//	char	str1[4] = "C";
+//	char	str2[3] = "at";
+//	char	str3[4] = "C";
+//	char	str4[3] = "at";
+	char	str1[37] = "Capture the gods, ";
+	char	str2[19] = "advance the troops";
+	char	str3[37] = "Capture the gods, ";
+	char	str4[19] = "advance the troops";
+
+	printf("ft_strcat:\n");
+	printf("str1: %s\n", str1);
+	printf("str2: %s\n", str2);
+	printf("libc strcat: %s\n", strcat(str1, str2));
+	printf("nasm strcat: %s\n", ft_strcat(str3, str4));
 
 	/* cleanup */
 

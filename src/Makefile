@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/05 14:24:29 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/05 15:54:56 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/06 10:10:11 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ SRC = ft_memset.s ft_bzero.s
 
 OBJ = $(SRC:.s=.o)
 
+OBJ_TYPE = macho64
+
 all: $(NAME)
 
 $(NAME): $(SRC) $(OBJ)
@@ -36,9 +38,9 @@ $(NAME): $(SRC) $(OBJ)
 
 %.o: %.s
 	@echo "Create object file"
-	@$(ASM) -f elf64 -o $@ $<
+	@$(ASM) -f $(OBJ_TYPE) -o $@ $<
 
-main: $(MAIN)
+main: $(MAIN) $(SRC)
 	@echo "Compile main"
 	@$(CC) -o $(NAME_MAIN) $(MAIN) -L. -lfts $(FLAGS)
 

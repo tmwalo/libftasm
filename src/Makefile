@@ -22,7 +22,7 @@ MAIN = main.c
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC = ft_memset.s ft_bzero.s ft_strcat.s ft_isalpha.s
+SRC = ft_memset.s ft_bzero.s ft_strcat.s ft_isalpha.s ft_isdigit.s
 
 OBJ = $(SRC:.s=.o)
 

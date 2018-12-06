@@ -79,7 +79,16 @@ int		main(void) {
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'X', (isalpha('X')) ? "True" : "False", (ft_isalpha('X')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '1', (isalpha('1')) ? "True" : "False", (ft_isalpha('1')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '[', (isalpha('[')) ? "True" : "False", (ft_isalpha('[')) ? "True" : "False");
-	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '}', (isalpha('}')) ? "True" : "False", (ft_isalpha('}')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n\n", '}', (isalpha('}')) ? "True" : "False", (ft_isalpha('}')) ? "True" : "False");
+
+	/* ft_isdigit */
+
+	printf("ft_isdigit:\n");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'c', (isdigit('c')) ? "True" : "False", (ft_isdigit('c')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'X', (isdigit('X')) ? "True" : "False", (ft_isdigit('X')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '7', (isdigit('1')) ? "True" : "False", (ft_isdigit('1')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '[', (isdigit('[')) ? "True" : "False", (ft_isdigit('[')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n\n", '}', (isdigit('}')) ? "True" : "False", (ft_isdigit('}')) ? "True" : "False");
 
 	/* cleanup */
 

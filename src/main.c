@@ -12,6 +12,7 @@
 
 #include "libfts.h"
 #include <stdio.h>
+#include <ctype.h>
 
 void	print_mem_bytes(char *str, int num_bytes) {
 	for (int i = 0; i < num_bytes; ++i) {
@@ -36,7 +37,7 @@ int		main(void) {
 
 	printf("ft_memset:\n");
 	memset_str = strdup(str);
-	printf("set 12 bytes to 'x', libc: %s\n", memset(strdup(str), 'x', 12));
+	printf("set 12 bytes to 'x', libc: %s\n", (char *) memset(strdup(str), 'x', 12));
 	ft_memset(memset_str, 'x', 12);
 	printf("set 12 bytes to 'x', nasm: %s\n\n", memset_str);
 
@@ -69,7 +70,16 @@ int		main(void) {
 	printf("str1: %s\n", str1);
 	printf("str2: %s\n", str2);
 	printf("libc strcat: %s\n", strcat(str1, str2));
-	printf("nasm strcat: %s\n", ft_strcat(str3, str4));
+	printf("nasm strcat: %s\n\n", ft_strcat(str3, str4));
+
+	/* ft_isalpha */
+
+	printf("ft_isalpha:\n");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'c', (isalpha('c')) ? "True" : "False", (ft_isalpha('c')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", 'X', (isalpha('X')) ? "True" : "False", (ft_isalpha('X')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '1', (isalpha('1')) ? "True" : "False", (ft_isalpha('1')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '[', (isalpha('[')) ? "True" : "False", (ft_isalpha('[')) ? "True" : "False");
+	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '}', (isalpha('}')) ? "True" : "False", (ft_isalpha('}')) ? "True" : "False");
 
 	/* cleanup */
 

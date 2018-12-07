@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/07 13:49:36 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/07 14:14:42 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,16 @@ int		main(void) {
 	printf("test char = %c, libc = %c, nasm = %c\n", 'a', toupper('a'), ft_toupper('a'));
 	printf("test char = %c, libc = %c, nasm = %c\n", '3', toupper('3'), ft_toupper('3'));
 	printf("test char = %c, libc = %c, nasm = %c\n", '?', toupper('?'), ft_toupper('?'));
-	printf("test char = %c, libc = %c, nasm = %c\n", '!', toupper('!'), ft_toupper('!'));
+	printf("test char = %c, libc = %c, nasm = %c\n\n", '!', toupper('!'), ft_toupper('!'));
+	
+	/* ft_tolower */
+
+	printf("ft_tolower:\n");
+	printf("test char = %c, libc = %c, nasm = %c\n", 'B', tolower('B'), ft_tolower('B'));
+	printf("test char = %c, libc = %c, nasm = %c\n", 'a', tolower('a'), ft_tolower('a'));
+	printf("test char = %c, libc = %c, nasm = %c\n", '3', tolower('3'), ft_tolower('3'));
+	printf("test char = %c, libc = %c, nasm = %c\n", '?', tolower('?'), ft_tolower('?'));
+	printf("test char = %c, libc = %c, nasm = %c\n\n", '!', tolower('!'), ft_tolower('!'));
 
 	/* cleanup */
 

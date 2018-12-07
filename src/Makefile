@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/05 14:24:29 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/07 09:14:15 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/07 10:01:31 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ MAIN = main.c
 FLAGS = -Wall -Wextra -Werror
 
 SRC = ft_memset.s ft_bzero.s ft_strcat.s ft_isalpha.s ft_isdigit.s ft_isalnum.s \
-		ft_isascii.s ft_isprint.s
+		ft_isascii.s ft_isprint.s ft_toupper.s
 
 OBJ = $(SRC:.s=.o)
 

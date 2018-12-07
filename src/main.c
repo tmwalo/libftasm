@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/06 16:40:54 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/07 13:49:36 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,16 @@ int		main(void) {
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n", '7', (isprint('1')) ? "True" : "False", (ft_isprint('1')) ? "True" : "False");
 	printf("test char = %s, libc ret = %s, nasm ret = %s\n", "\\0", (isprint('\0')) ? "True" : "False", (ft_isprint('\0')) ? "True" : "False");
 	printf("test char = %c, libc ret = %s, nasm ret = %s\n\n", '}', (isprint('}')) ? "True" : "False", (ft_isprint('}')) ? "True" : "False");
+	
+	/* ft_toupper */
+
+	printf("ft_toupper:\n");
+	printf("test char = %c, libc = %c, nasm = %c\n", 'B', toupper('B'), ft_toupper('B'));
+	printf("test char = %c, libc = %c, nasm = %c\n", 'a', toupper('a'), ft_toupper('a'));
+	printf("test char = %c, libc = %c, nasm = %c\n", '3', toupper('3'), ft_toupper('3'));
+	printf("test char = %c, libc = %c, nasm = %c\n", '?', toupper('?'), ft_toupper('?'));
+	printf("test char = %c, libc = %c, nasm = %c\n", '!', toupper('!'), ft_toupper('!'));
+
 	/* cleanup */
 
 	free(memset_str);

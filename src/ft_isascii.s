@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/07 09:24:23 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/08 14:56:12 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 15:36:31 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ global		_ft_isascii
 
 _ft_isascii:
 	push	rbp
-	mov		rsp
+	mov		rbp, rsp
 	cmp		rdi, 0
 	jl		false
 	cmp		rdi, 127

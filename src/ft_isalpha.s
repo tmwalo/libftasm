@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/07 09:22:10 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/08 14:54:05 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 15:51:33 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ lowercase:
 	jg		notalpha
 isalpha:
 	mov		rax, 1
+	leave
 	ret
 notalpha:
 	mov		rax, 0

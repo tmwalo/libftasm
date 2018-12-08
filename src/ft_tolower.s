@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/07 13:56:04 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/08 14:58:02 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 15:55:27 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ _ft_tolower:
 	sub		rbx, 'A'
 	add		rdx, rbx						; mov forwards through ascii values to find corrsp. lowercase val
 	mov		rax, rdx
+	leave
 	ret
 islower:
 	mov		rax, rdi

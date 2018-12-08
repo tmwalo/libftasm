@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/07 09:31:21 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/08 14:57:28 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 15:49:50 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ _ft_toupper:
 	sub		rbx, 'A'
 	sub		rdx, rbx						; mov backwards through ascii values to find corrsp. uppercase val
 	mov		rax, rdx
+	leave
 	ret
 isupper:
 	mov		rax, rdi

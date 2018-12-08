@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/07 13:56:04 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/07 14:04:16 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 14:58:02 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,8 @@ segment		.text
 global		_ft_tolower
 
 _ft_tolower:
+	push	rbp
+	mov		rbp, rsp
 	cmp		rdi, 'A'
 	jl		islower
 	cmp		rdi, 'Z'
@@ -26,4 +28,5 @@ _ft_tolower:
 	ret
 islower:
 	mov		rax, rdi
+	leave
 	ret

@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/06 13:47:42 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/06 17:02:44 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 14:52:03 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,8 @@ segment		.text
 global		_ft_strcat
 
 _ft_strcat:
+	push	rbp
+	mov		rbp, rsp
 	mov		rax, rdi									; set ret val
 	xor		rbx, rbx									; set src index to 0
 	xor		rcx, rcx									; set dest index to 0
@@ -33,4 +35,5 @@ cat:													; append src to dest str
 endcat:													; set terminating null char
 	xor		rdx, rdx
 	mov		[rdi + 1 * rcx], rdx
+	leave
 	ret

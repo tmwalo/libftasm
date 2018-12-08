@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/07 09:22:10 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/07 09:22:14 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 14:54:05 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ global		_ft_isalpha
 
 _ft_isalpha:
 uppercase:
+	push	rbp
+	mov		rbp, rsp
 	cmp		rdi, 'A'
 	jl		lowercase
 	cmp		rdi, 'Z'
@@ -29,4 +31,5 @@ isalpha:
 	ret
 notalpha:
 	mov		rax, 0
+	leave
 	ret

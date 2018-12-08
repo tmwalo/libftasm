@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/07 09:24:23 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/07 09:26:50 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 14:56:12 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,8 @@ segment		.text
 global		_ft_isascii
 
 _ft_isascii:
+	push	rbp
+	mov		rsp
 	cmp		rdi, 0
 	jl		false
 	cmp		rdi, 127
@@ -22,4 +24,5 @@ _ft_isascii:
 	ret
 false:
 	mov		rax, 0
+	leave
 	ret

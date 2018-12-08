@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/07 09:31:21 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/07 10:01:03 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/08 14:57:28 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,8 @@ segment		.text
 global		_ft_toupper
 
 _ft_toupper:
+	push	rbp
+	mov		rbp, rsp
 	cmp		rdi, 'a'
 	jl		isupper
 	cmp		rdi, 'z'
@@ -26,4 +28,5 @@ _ft_toupper:
 	ret
 isupper:
 	mov		rax, rdi
+	leave
 	ret

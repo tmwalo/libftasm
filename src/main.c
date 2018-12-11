@@ -14,6 +14,8 @@
 #include <stdio.h>
 #include <ctype.h>
 
+void	ft_putchar(char c);
+
 void	print_mem_bytes(char *str, int num_bytes) {
 	for (int i = 0; i < num_bytes; ++i) {
 		if (str[i] != '\0')
@@ -162,16 +164,12 @@ int		main(void) {
 
 	/* ft_puts */
 
-	/*
-
 	printf("ft_puts:\n");
 	printf("test str: %s\nlibc: ", str);
 	puts(str);
 	printf("\nnasm: ");
 	ft_puts(str);
 	printf("\n\n");
-
-	*/
 
 	/* cleanup */
 

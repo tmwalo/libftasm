@@ -171,6 +171,11 @@ int		main(void) {
 	ft_puts(str);
 	printf("\n\n");
 
+	/* ft_strlen */
+
+	printf("ft_strlen:\n");
+	printf("test str: %s\nlibc len = %lu, nasm len = %lu\n\n", str, strlen(str), ft_strlen(str));
+
 	/* cleanup */
 
 	free(memset_str);

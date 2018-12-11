@@ -23,11 +23,12 @@ MAIN = main.c
 FLAGS = -Wall -Wextra -Werror
 
 SRC = ft_memset.s ft_bzero.s ft_strcat.s ft_isalpha.s ft_isdigit.s ft_isalnum.s \
-		ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s ft_putchar.s ft_puts.s
+		ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s ft_putchar.s ft_puts.s \
+		ft_strlen.s
 
 OBJ = $(SRC:.s=.o)
 
-OBJ_TYPE = macho64
+OBJ_TYPE = elf64
 
 all: $(NAME)
 

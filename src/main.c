@@ -176,6 +176,18 @@ int		main(void) {
 	printf("ft_strlen:\n");
 	printf("test str: %s\nlibc len = %lu, nasm len = %lu\n\n", str, strlen(str), ft_strlen(str));
 
+	/* ft_memcpy */
+
+	char		lelouch[33] = "Obey me subjects; obey me world.";
+	char		lelouch_copy[33];
+	char		libc_lelouch_copy[33];
+
+	printf("ft_strlen:\n");
+	printf("test str: %s\nCopy 9 bytes into new array:\n", lelouch);
+	bzero(lelouch_copy, 33);
+	bzero(libc_lelouch_copy, 33);
+	printf("libc = %s\nnasm = %s\n\n", (char *) memcpy(libc_lelouch_copy, lelouch, 1), (char *) ft_memcpy(lelouch_copy, lelouch, 1));
+
 	/* cleanup */
 
 	free(memset_str);

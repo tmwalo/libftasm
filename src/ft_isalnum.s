@@ -1,7 +1,7 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ft_isalnum.s                                       :+:      :+:    :+:    #
+#    _ft_isalnum.s                                       :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -19,10 +19,10 @@ _ft_isalnum:
 	push	rbp
 	mov		rbp, rsp
 	sub		rsp, 16							; allocate stack memory for rdi
-	push	rdi								; store original rdi val on stack incase ft_isalpha changes it
+	mov		[rsp], rdi						; store original rdi val on stack incase _ft_isalpha changes it
 	call	_ft_isalpha
-	mov		rdi, rsp						; restore original rdi val from stack memory incase it was changed by ft_isalpha
-	cmp		rax, 1							; cmp ft_isalpha ret val
+	mov		rdi, [rsp]						; restore original rdi val from stack memory incase it was changed by _ft_isalpha
+	cmp		rax, 1							; cmp _ft_isalpha ret val
 	je		exit
 	call	_ft_isdigit
 exit:

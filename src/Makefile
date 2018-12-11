@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/05 14:24:29 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/07 14:04:46 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/07 16:52:23 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ MAIN = main.c
 FLAGS = -Wall -Wextra -Werror
 
 SRC = ft_memset.s ft_bzero.s ft_strcat.s ft_isalpha.s ft_isdigit.s ft_isalnum.s \
-		ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s
+		ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s ft_putchar.s ft_puts.s
 
 OBJ = $(SRC:.s=.o)
 
@@ -53,7 +53,7 @@ fclean: clean
 	@echo "Clean library"
 	@/bin/rm -f $(NAME)
 
-clean-main:
+cmain:
 	@echo "Clean main"
 	@/bin/rm -f $(NAME_MAIN)
 

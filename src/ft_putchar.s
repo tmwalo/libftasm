@@ -1,7 +1,7 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ft_putchar.s                                       :+:      :+:    :+:    #
+#    _ft_putchar.s                                       :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -11,12 +11,12 @@
 # **************************************************************************** #
 
 segment		.text
-global		ft_putchar
+global		_ft_putchar
 
-ft_putchar:
+_ft_putchar:
 	push	rbp
 	mov		rbp, rsp
-	sub		rsp, 16				; allocate stack memory to store ft_putchar arg
+	sub		rsp, 16				; allocate stack memory to store _ft_putchar arg
 	mov		[rsp], rdi
 	mov		rax, 0x2000004		; write syscall
 	mov		rdi, 1				; fd

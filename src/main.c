@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/12 12:04:06 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/12 12:27:20 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,31 +137,6 @@ int		main(void) {
 	printf("test char = %c, libc = %c, nasm = %c\n", '?', tolower('?'), ft_tolower('?'));
 	printf("test char = %c, libc = %c, nasm = %c\n\n", '!', tolower('!'), ft_tolower('!'));
 
-	/* ft_putchar */
-
-	printf("ft_putchar:\n");
-	printf("test_char = %c, libc = ", 'v');
-	putchar('v');
-	printf(", nasm = ");
-	ft_putchar('v');
-	printf("test_char = %c, libc = ", '7');
-	putchar('7');
-	printf(", nasm = ");
-	ft_putchar('7');
-	printf("test_char = %c, libc = ", '?');
-	putchar('?');
-	printf(", nasm = ");
-	ft_putchar('?');
-	printf("test_char = %c, libc = ", '!');
-	putchar('!');
-	printf(", nasm = ");
-	ft_putchar('!');
-	printf("test_char = %c, libc = ", 'Z');
-	putchar('Z');
-	printf(", nasm = ");
-	ft_putchar('Z');
-	printf("\n\n");
-
 	/* ft_puts */
 
 	printf("ft_puts:\n");
@@ -174,7 +149,7 @@ int		main(void) {
 	/* ft_strlen */
 
 	printf("ft_strlen:\n");
-	printf("test str: %s\nlibc len = %lu, nasm len = %lu\n\n", str, strlen(str), ft_strlen(str));
+	printf("test str: %s\nlibc len = %lu\nnasm len = %lu\n\n", str, strlen(str), ft_strlen(str));
 
 	/* ft_memcpy */
 

@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/12 13:30:05 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/12 14:50:01 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,7 +160,7 @@ int		main(void) {
 	printf("test str: %s\nCopy 9 bytes into new array:\n", lelouch);
 	bzero(lelouch_copy, 33);
 	bzero(libc_lelouch_copy, 33);
-	printf("libc = %s\nnasm = %s\n\n", (char *) memcpy(libc_lelouch_copy, lelouch, 1), (char *) ft_memcpy(lelouch_copy, lelouch, 1));
+	printf("libc = %s\nnasm = %s\n\n", (char *) memcpy(libc_lelouch_copy, lelouch, 9), (char *) ft_memcpy(lelouch_copy, lelouch, 9));
 
 	/* cleanup */
 

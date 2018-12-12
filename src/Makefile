@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/05 14:24:29 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/07 16:52:23 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/12 08:47:26 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC = ft_memset.s ft_bzero.s ft_strcat.s ft_isalpha.s ft_isdigit.s ft_isalnum.s 
 
 OBJ = $(SRC:.s=.o)
 
-OBJ_TYPE = elf64
+OBJ_TYPE = macho64
 
 all: $(NAME)
 

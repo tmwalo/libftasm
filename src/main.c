@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/12 14:50:01 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/12 17:05:35 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,6 +161,14 @@ int		main(void) {
 	bzero(lelouch_copy, 33);
 	bzero(libc_lelouch_copy, 33);
 	printf("libc = %s\nnasm = %s\n\n", (char *) memcpy(libc_lelouch_copy, lelouch, 9), (char *) ft_memcpy(lelouch_copy, lelouch, 9));
+
+	/* ft_strdup */
+
+	char	dupstr[25] = "The flames of war unify.";
+
+	printf("ft_strdup:\ntest str: %s\n", dupstr);
+	printf("%s\n", strdup(dupstr));
+	printf("%s\n\n", ft_strdup(dupstr));
 
 	/* cleanup */
 

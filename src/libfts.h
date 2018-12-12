@@ -32,5 +32,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	ft_putchar(char c);
 void	ft_puts(char const *s);
+void	ft_cat(int fd);
 
 #endif

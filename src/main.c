@@ -13,6 +13,7 @@
 #include "libfts.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <fcntl.h>
 
 void	ft_putchar(char c);
 
@@ -169,6 +170,15 @@ int		main(void) {
 	printf("ft_strdup:\ntest str: %s\n", dupstr);
 	printf("%s\n", strdup(dupstr));
 	printf("%s\n\n", ft_strdup(dupstr));
+
+	/* ft_cat */
+
+	int		fd;
+
+	printf("ft_cat:\n");
+	fd = open("cat.txt", O_RDONLY);
+	ft_cat(fd);
+	close(fd);
 
 	/* cleanup */
 

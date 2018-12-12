@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/12 08:56:38 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/12 09:33:02 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,6 +169,15 @@ int		main(void) {
 	puts(str);
 	printf("\nnasm: ");
 	ft_puts(str);
+	printf("\n\n");
+
+	/* ft_puts_alt */
+
+	printf("ft_puts_alt:\n");
+	printf("test str: %s\nlibc: ", str);
+	puts(str);
+	printf("\nnasm: ");
+	ft_puts_alt(str);
 	printf("\n\n");
 
 	/* ft_strlen */

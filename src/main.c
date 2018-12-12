@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/08 16:04:47 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/12 08:56:38 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,7 +182,7 @@ int		main(void) {
 	char		lelouch_copy[33];
 	char		libc_lelouch_copy[33];
 
-	printf("ft_strlen:\n");
+	printf("ft_memcpy:\n");
 	printf("test str: %s\nCopy 9 bytes into new array:\n", lelouch);
 	bzero(lelouch_copy, 33);
 	bzero(libc_lelouch_copy, 33);

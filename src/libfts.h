@@ -6,16 +6,14 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:24:36 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/12 12:24:06 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/13 09:59:30 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTS_H
 # define LIBFTS_H
 
-# include <string.h>
 # include <stdlib.h>
-# include <unistd.h>
 
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);

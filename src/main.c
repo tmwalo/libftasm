@@ -6,14 +6,16 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/13 09:26:48 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/13 10:05:43 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libfts.h"
 #include <stdio.h>
+#include <string.h>
 #include <ctype.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 void	ft_putchar(char c);
 
@@ -60,10 +62,6 @@ int		main(void) {
 
 	/* ft_strcat */
 
-//	char	str1[4] = "C";
-//	char	str2[3] = "at";
-//	char	str3[4] = "C";
-//	char	str4[3] = "at";
 	char	str1[37] = "Capture the gods, ";
 	char	str2[19] = "advance the troops";
 	char	str3[37] = "Capture the gods, ";

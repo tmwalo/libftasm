@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/12 15:13:32 by tmwalo            #+#    #+#              #
-#    Updated: 2018/12/12 17:03:29 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/12/13 11:03:22 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,7 @@ _ft_strdup:
 	call	_malloc
 	mov		r13, rax				; store ptr of allocated memory in callee-saved register
 	mov		rdi, rax
-	mov		rsi, r12
-	call	_ft_bzero
-	mov		rdi, r13
 	mov		rsi, rbx
-	dec		r12						; copy bytes excluding terminating null char
 	mov		rdx, r12
 	call	_ft_memcpy
 	mov		rax, r13

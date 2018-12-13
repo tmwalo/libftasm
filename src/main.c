@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/13 10:05:43 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/13 10:32:10 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,7 @@ int		main(void) {
 	printf("ft_memset:\n");
 	memset_str = strdup(str);
 	printf("set 12 bytes to 'x', libc: %s\n", (char *) memset(strdup(str), 'x', 12));
-	ft_memset(memset_str, 'x', 12);
-	printf("set 12 bytes to 'x', nasm: %s\n\n", memset_str);
+	printf("set 12 bytes to 'x', nasm: %s\n\n", (char *) ft_memset(memset_str, 'x', 12));
 
 	/* ft_bzero */
 

@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:26:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/12/12 17:05:35 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/12/13 09:26:48 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,8 +177,10 @@ int		main(void) {
 
 	printf("ft_cat:\n");
 	fd = open("cat.txt", O_RDONLY);
-	ft_cat(fd);
-	close(fd);
+	if (fd != -1) {
+		ft_cat(fd);
+		close(fd);
+	}
 
 	/* cleanup */
 
